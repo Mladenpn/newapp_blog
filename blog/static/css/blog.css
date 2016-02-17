@@ -1,6 +1,6 @@
 h1 a {
     color: #FCA205;
-    font-family: 'Lobster';
+    font-family: 'Passion One', cursive;
 }
 
 body {
@@ -8,7 +8,7 @@ body {
 }
 
 .page-header {
-    background-color: #ff9400;
+    background-color: #006622;
     margin-top: 0;
     padding: 20px 20px 20px 40px;
 }
@@ -17,6 +17,11 @@ body {
     color: #ffffff;
     font-size: 36pt;
     text-decoration: none;
+    opacity: 0.8;
+}
+
+.page-header:hover {
+    opacity: 0.9;
 }
 
 .content {
@@ -24,7 +29,7 @@ body {
 }
 
 h1, h2, h3, h4 {
-    font-family: 'Lobster', cursive;
+    font-family: 'Passion One', cursive;
 }
 
 .date {
@@ -45,10 +50,16 @@ h1, h2, h3, h4 {
     float: right;
     font-size: 26pt;
     margin-right: 20px;
+    opacity: 0.8;
 }
 
 .post {
     margin-bottom: 70px;
+
+}
+
+.post:hover {
+    background-color: #e6ffe6;
 }
 
 .post h1 a, .post h1 a:visited {
@@ -57,4 +68,8 @@ h1, h2, h3, h4 {
 
 .comment {
     margin: 20px 0px 20px 20px;
+}
+
+.bocne {
+    opacity: 0.8;    
 }

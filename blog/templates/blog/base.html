@@ -1,14 +1,15 @@
 {% load staticfiles %}
 <html>
     <head>
-        <title>Python/Django Blog</title>
+        <title>My new Blog</title>
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="{% static 'css/blog.css' %}">
-        <link href="http://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+        <link href="http://fonts.googleapis.com/css?family=Passion+One" rel="stylesheet" type="text/css">
 
     </head>
     <body>
+        <div class="content container">
         <div class="page-header">
             {% if user.is_authenticated %}
             <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
@@ -17,15 +18,21 @@
             {% else %}
             <a href="{% url 'django.contrib.auth.views.login' %}" class="top-menu"><span class="glyphicon glyphicon-lock"></span></a>
             {% endif %}
-            <h1><a href="{% url 'post_list' %}">Python/Django Blog</a></h1>
+            <h1><a href="{% url 'post_list' %}">My new Blog</a></h1>
 
         </div>
 
-        <div class="content container">
+        
     <div class="row">
+        <div class="col-md-2 bocne">
+            <img src="http://www.unixstickers.com/image/cache/data/stickers/django/django_badge.sh-600x600.png" class="img-responsive" alt="Responsive image">
+        </div>
         <div class="col-md-8">
             {% block content %}
             {% endblock %}
+        </div>
+        <div class="col-md-2 bocne">
+            <img src="http://www.unixstickers.com/image/cache/data/stickers/django/django_badge.sh-600x600.png" class="img-responsive" alt="Responsive image">
         </div>
     </div>
 </div>
